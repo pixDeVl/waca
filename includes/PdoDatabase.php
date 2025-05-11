@@ -106,7 +106,7 @@ class PdoDatabase extends PDO
 
             // set the transaction isolation level for every transaction.
             // string substitution is safe here; values can only be one of the above constants
-            parent::exec("SET TRANSACTION ISOLATION LEVEL ${isolationLevel}, ${accessMode};");
+            parent::exec("SET TRANSACTION ISOLATION LEVEL {$isolationLevel}, {$accessMode};");
 
             // start a new transaction, and return whether the start was successful
             $this->hasActiveTransaction = parent::beginTransaction();

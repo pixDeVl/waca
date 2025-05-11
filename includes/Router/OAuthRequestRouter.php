@@ -18,7 +18,7 @@ use Waca\Pages\UserAuth\PageOAuthCallback;
  */
 class OAuthRequestRouter extends RequestRouter
 {
-    protected function getRouteFromPath($pathInfo)
+    public function getRouteFromPath($pathInfo)
     {
         // Hardcode the route for this entry point
         return array(PageOAuthCallback::class, 'authorise');

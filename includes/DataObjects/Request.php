@@ -21,6 +21,7 @@ use Waca\RequestStatus;
  *
  * This data object is the main request object.
  */
+#[\AllowDynamicProperties]
 class Request extends DataObject
 {
     private $email;
